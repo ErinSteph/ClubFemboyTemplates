@@ -1,6 +1,6 @@
 # Club-Femboy Templates
 
-My dumbass, in additioon to my dumbass refactor, just pushed without pulling. Retyping readme lol. <br /> <br />
+My dumbass, in addition to my dumbass refactor, just pushed without pulling. Retyping readme lol. <br /> <br />
 
 Currently just a template of a club femboy profile.<br />
 It isn't a fully functional profile, it's just a mockup of the layout.<br />
