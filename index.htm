@@ -1,0 +1,625 @@
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container{
+        width:400px;
+        height:600px;
+        border:1px solid;
+        float:left;
+        margin:10px;
+        overflow-y:hidden;
+      }
+      .controls{
+        border-bottom:1px solid;
+        height:100px;
+        overflow:scroll;
+        text-align:center;
+        font-size:small;
+      }
+      .header{
+        border-bottom:1px solid;
+        padding-top:10px;
+        height:30px;
+        text-align:center;
+        font-weight:bold;
+        font-size:large;
+      }
+      .mobFrame{
+
+      }
+      .pfp{
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        content:url(pfp1.png);
+        float:left;
+        margin-left:20px;
+      }
+      .headInfo{
+        width:350px;
+        height:50px;
+        float:none;
+        margin-top:10px;
+        margin-right:10px;
+      }
+      .infoBox{
+        width:50px;
+        height:50px;
+        float:left;
+        margin-left:30px;
+        margin-right:10px;
+        margin-top:10px;
+        text-align:center;
+      }
+      .attributes{
+        margin-top:10px;
+        padding:10px;
+      }
+      .posts{
+        margin-top:5px;
+        padding:10px;
+      }
+      .postImg{
+        width:120px;
+        height:120px;
+        margin-right:2px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <!-------------->
+
+    <div class="container">
+      <div class="header">
+        Mode 1
+      </div>
+      <div class="controls">
+
+        Gender Identity<br>Male<input type="range" min="1" max="100" value="50" class="slider" id="s1">Female<br>
+        <input type="checkbox" id="agender" name="agender" value="agender">
+        <label for="agender"> Agender</label>
+        <input type="checkbox" id="fluid" name="fluid" value="fluid">
+        <label for="fluid"> Fluid</label>
+        <input type="checkbox" id="enby" name="enby" value="enby">
+        <label for="enby"> Enby</label>
+        <br><br>
+
+        Gender Expression<br>Masc<input type="range" min="1" max="100" value="50" class="slider" id="s2">Fem
+        <br><br>
+
+        Sexual Attraction<br>Males<input type="range" min="1" max="100" value="50" class="slider" id="s3">Females<br>
+        <input type="checkbox" id="asexual" name="asexual" value="asexual">
+        <label for="asexual"> Asexual</label>
+        <br><br>
+
+        Romantic Attraction<br>Males<input type="range" min="1" max="100" value="50" class="slider" id="s4">Females<br>
+        <input type="checkbox" id="aromantic" name="aromantic" value="aromantic">
+        <label for="aromantic"> Aromantic</label>
+
+        <br><br>
+
+        Position<br>Top<input type="range" min="1" max="100" value="50" class="slider" id="s5">Bottom<br>
+        <input type="checkbox" id="posSwitch" name="posSwitch" value="posSwitch">
+        <label for="posSwitch"> Switch</label>
+
+        <br><br>
+
+        Role<br>Dom<input type="range" min="1" max="100" value="50" class="slider" id="s6">Sub<br>
+        <input type="checkbox" id="rolSwitch" name="rolSwitch" value="rolSwitch">
+        <label for="rolSwitch"> Switch</label>
+
+      </div>
+      <div class="mobFrame">
+        <div class="headInfo">
+          <image class="pfp" />
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">posts</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">followers</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">following</span>
+          </div>
+        </div>
+        <br>
+        <div style="font-size:small;float:none;margin-left:20px;padding-right:30px;">
+          <div>
+            <span style="font-weight:bold;font-size:small;">Erin</span> <span style="font-size:small;">she/her</span>
+          </div>
+          <div>
+            blablabla this is my bio do you hate me yet
+          </div>
+          <div class="attributesHead" style="font-weight:bold;font-size:small;margin-top:10px;margin-bottom:10px;">
+             <button type="button" id="displayAtts1" style="font-size:x-small;">Show Attributes</button>
+          </div>
+          <div class="attributes" id="att1" style="text-align:center;display:none;">
+
+              <span style="font-weight:bold;font-size:small;">Gender Identity</span><br>
+              <span id="gid">
+                male <span id="s1range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                  <span id="out1" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                    ♥︎
+                  </span>
+                </span> female
+              </span>
+              <span id="agenlab" style="display:none;">agender</span>
+              <span id="fluidlab" style="display:none;">gender fluid</span>
+              <span id="enbylab" style="display:none;">enby</span>
+
+              <br>
+
+              <span style="font-weight:bold;font-size:small;">Gender Expression</span><br>
+              <span id="gex">
+                masc <span id="s2range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                  <span id="out2" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                    ♥︎
+                  </span>
+                </span> femme
+              </span>
+
+              <br>
+
+              <span style="font-weight:bold;font-size:small;">Sexual Attraction</span><br>
+              <span id="sex">
+                males <span id="s3range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                  <span id="out3" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                    ♥︎
+                  </span>
+                </span> females
+              </span>
+              <span id="asexlab" style="display:none;">asexual</span>
+
+              <br>
+
+              <span style="font-weight:bold;font-size:small;">Romantic Attraction</span><br>
+              <span id="rom">
+                males <span id="s4range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                  <span id="out4" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                    ♥︎
+                  </span>
+                </span> females
+              </span>
+              <span id="aromlab" style="display:none;">aromantic</span>
+
+              <span id="hideOnAsex">
+
+                <br>
+
+                <span style="font-weight:bold;font-size:small;">Position</span><br>
+                <span id="pos">
+                  top <span id="s5range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                    <span id="out5" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                      ♥︎
+                    </span>
+                  </span> bottom
+                </span>
+                <span id="posSwlab" style="display:none;">switch</span>
+
+                <br>
+
+                <span style="font-weight:bold;font-size:small;">Role</span><br>
+                <span id="rol">
+                  dom <span id="s6range" style="display:inline-block;width:165px;height:10px;background-color:#f899ff;border-radius:3px;">
+                    <span id="out6" style="float:left;margin-top:-8px;margin-left:75px;font-size:x-large;color:#3443eb;">
+                      ♥︎
+                    </span>
+                  </span> sub
+                </span>
+                <span id="rolSwlab" style="display:none;">switch</span>
+
+
+              </span>
+
+
+            </div>
+        </div>
+        <hr>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;border-bottom:2px solid;">
+          ⏍
+        </div>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;margin-bottom:10px;">
+          ☻
+        </div>
+          <div class="posts">
+            <image class="postImg" src="p1.jpg"/>
+            <image class="postImg" src="p2.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--------------
+
+    <div class="container">
+      <div class="header">
+        Mode 2
+      </div>
+      <div class="controls">
+      </div>
+      <div class="mobFrame">
+        <div class="headInfo">
+          <image class="pfp" />
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">posts</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">followers</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">following</span>
+          </div>
+        </div>
+        <br>
+        <div style="font-size:small;float:none;margin-left:20px;padding-right:30px;">
+          <div>
+            <span style="font-weight:bold;font-size:small;">Erin</span> <span style="font-size:small;">she/her</span>
+          </div>
+          <div>
+            blablabla this is my bio do you hate me yet
+          </div>
+          <div class="attributesHead" style="font-weight:bold;font-size:small;margin-top:10px;margin-bottom:10px;">
+            User attributes:
+          </div>
+          <div class="attributes">
+          </div>
+        </div>
+        <hr>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;border-bottom:2px solid;">
+          ⏍
+        </div>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;margin-bottom:10px;">
+          ☻
+        </div>
+          <div class="posts">
+            <image class="postImg" src="p1.jpg"/>
+            <image class="postImg" src="p2.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+-->
+<!--------------
+
+    <div class="container">
+      <div class="header">
+        Mode 3
+      </div>
+      <div class="controls">
+      </div>
+      <div class="mobFrame">
+        <div class="headInfo">
+          <image class="pfp" />
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">posts</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">followers</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">following</span>
+          </div>
+        </div>
+        <br>
+        <div style="font-size:small;float:none;margin-left:20px;padding-right:30px;">
+          <div>
+            <span style="font-weight:bold;font-size:small;">Erin</span> <span style="font-size:small;">she/her</span>
+          </div>
+          <div>
+            blablabla this is my bio do you hate me yet
+          </div>
+          <div class="attributesHead" style="font-weight:bold;font-size:small;margin-top:10px;margin-bottom:10px;">
+            User attributes:
+          </div>
+          <div class="attributes">
+          </div>
+        </div>
+        <hr>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;border-bottom:2px solid;">
+          ⏍
+        </div>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;margin-bottom:10px;">
+          ☻
+        </div>
+          <div class="posts">
+            <image class="postImg" src="p1.jpg"/>
+            <image class="postImg" src="p2.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+-->
+    <!--------------
+
+    <div class="container">
+      <div class="header">
+        Mode 4
+      </div>
+      <div class="controls">
+      </div>
+      <div class="mobFrame">
+        <div class="headInfo">
+          <image class="pfp" />
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">posts</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">followers</span>
+          </div>
+          <div class="infoBox">
+            <span style="font-weight:bold;">20</span><br><span style="font-size:small;">following</span>
+          </div>
+        </div>
+        <br>
+        <div style="font-size:small;float:none;margin-left:20px;padding-right:30px;">
+          <div>
+            <span style="font-weight:bold;font-size:small;">Erin</span> <span style="font-size:small;">she/her</span>
+          </div>
+          <div>
+            blablabla this is my bio do you hate me yet
+          </div>
+          <div class="attributesHead" style="font-weight:bold;font-size:small;margin-top:10px;margin-bottom:10px;">
+            User attributes:
+          </div>
+          <div class="attributes">
+          </div>
+        </div>
+        <hr>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;border-bottom:2px solid;">
+          ⏍
+        </div>
+        <div class="selIcns" style="float:left;text-align:center;width:200px;height:40px;font-size:xx-large;font-weight:bold;margin-bottom:10px;">
+          ☻
+        </div>
+          <div class="posts">
+            <image class="postImg" src="p1.jpg"/>
+            <image class="postImg" src="p2.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+-->
+    <!-------------->
+
+  </body>
+  <script>
+
+    function modea(){
+      var s1 = document.getElementById("s1");
+      var sout1 = document.getElementById("out1");
+      var s1Mult = s1.value * 1.5;
+      sout1.style.marginLeft = s1Mult + "px";
+
+      var s2 = document.getElementById("s2");
+      var sout2 = document.getElementById("out2");
+      var s2Mult = s2.value * 1.5;
+      sout2.style.marginLeft = s2Mult + "px";
+
+      var s3 = document.getElementById("s3");
+      var sout3 = document.getElementById("out3");
+      var s3Mult = s3.value * 1.5;
+      sout3.style.marginLeft = s3Mult + "px";
+
+      var s4 = document.getElementById("s4");
+      var sout4 = document.getElementById("out4");
+      var s4Mult = s4.value * 1.5;
+      sout4.style.marginLeft = s4Mult + "px";
+
+      var s5 = document.getElementById("s5");
+      var sout5 = document.getElementById("out5");
+      var s5Mult = s5.value * 1.5;
+      sout5.style.marginLeft = s5Mult + "px";
+
+      var s6 = document.getElementById("s6");
+      var sout6 = document.getElementById("out6");
+      var s6Mult = s6.value * 1.5;
+      sout6.style.marginLeft = s6Mult + "px";
+
+      s1.oninput = function() {
+        s1Mult = this.value * 1.5;
+        sout1.style.marginLeft = s1Mult + "px";
+      }
+
+      s2.oninput = function() {
+        s2Mult = this.value * 1.5;
+        sout2.style.marginLeft = s2Mult + "px";
+      }
+
+      s3.oninput = function() {
+        s3Mult = this.value * 1.5;
+        sout3.style.marginLeft = s3Mult + "px";
+      }
+
+      s4.oninput = function() {
+        s4Mult = this.value * 1.5;
+        sout4.style.marginLeft = s4Mult + "px";
+      }
+
+      s5.oninput = function() {
+        s5Mult = this.value * 1.5;
+        sout5.style.marginLeft = s5Mult + "px";
+      }
+
+      s6.oninput = function() {
+        s6Mult = this.value * 1.5;
+        sout6.style.marginLeft = s6Mult + "px";
+      }
+
+      function agen(){
+        var checkBox = document.getElementById("agender");
+        var text = document.getElementById("gid");
+        var lab = document.getElementById("agenlab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+          document.getElementById("fluidlab").style.display = "none";
+          document.getElementById("fluid").checked = false;
+          document.getElementById("enbylab").style.display = "none";
+          document.getElementById("enby").checked = false;
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function fluid(){
+        var checkBox = document.getElementById("fluid");
+        var text = document.getElementById("gid");
+        var lab = document.getElementById("fluidlab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+          document.getElementById("agenlab").style.display = "none";
+          document.getElementById("agender").checked = false;
+          document.getElementById("enbylab").style.display = "none";
+          document.getElementById("enby").checked = false;
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function enby(){
+        var checkBox = document.getElementById("enby");
+        var text = document.getElementById("gid");
+        var lab = document.getElementById("enbylab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+          document.getElementById("fluidlab").style.display = "none";
+          document.getElementById("fluid").checked = false;
+          document.getElementById("agenlab").style.display = "none";
+          document.getElementById("agender").checked = false;
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function asex(){
+        var checkBox = document.getElementById("asexual");
+        var text = document.getElementById("sex");
+        var lab = document.getElementById("asexlab");
+
+        if (checkBox.checked == true){
+          document.getElementById("hideOnAsex").style.display = "none";
+          text.style.display = "none";
+          lab.style.display = "";
+        } else {
+          document.getElementById("hideOnAsex").style.display = "";
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function arom(){
+        var checkBox = document.getElementById("aromantic");
+        var text = document.getElementById("rom");
+        var lab = document.getElementById("aromlab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function posSw(){
+        var checkBox = document.getElementById("posSwitch");
+        var text = document.getElementById("pos");
+        var lab = document.getElementById("posSwlab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      function rolSw(){
+        var checkBox = document.getElementById("rolSwitch");
+        var text = document.getElementById("rol");
+        var lab = document.getElementById("rolSwlab");
+
+        if (checkBox.checked == true){
+          text.style.display = "none";
+          lab.style.display = "";
+        } else {
+          text.style.display = "";
+          lab.style.display = "none";
+        }
+      }
+
+      agen();
+      fluid();
+      enby();
+      asex();
+      arom();
+      posSw();
+      rolSw();
+
+      document.getElementById("agender").addEventListener("click", function(){
+        agen();
+      });
+
+      document.getElementById("fluid").addEventListener("click", function(){
+        fluid();
+      });
+
+      document.getElementById("enby").addEventListener("click", function(){
+        enby();
+      });
+
+      document.getElementById("asexual").addEventListener("click", function(){
+        asex();
+      });
+
+      document.getElementById("aromantic").addEventListener("click", function(){
+        arom();
+      });
+
+      document.getElementById("posSwitch").addEventListener("click", function(){
+        posSw();
+      });
+
+      document.getElementById("rolSwitch").addEventListener("click", function(){
+        rolSw();
+      });
+
+      if(document.getElementById("agender").checked == true){
+         document.getElementById("gid").style.display = "none";
+      }
+      if(document.getElementById("fluid").checked == true){
+        document.getElementById("gid").style.display = "none";
+      }
+
+      document.getElementById("displayAtts1").addEventListener("click", function(){
+        if(document.getElementById("att1").style.display == "none"){
+          document.getElementById("displayAtts1").innerHTML = "Hide Attributes";
+          document.getElementById("att1").style.display = ""
+        }else{
+          document.getElementById("displayAtts1").innerHTML = "Show Attributes";
+          document.getElementById("att1").style.display = "none"
+        }
+      });
+
+    }
+
+    modea();
+  </script>
+</html>
